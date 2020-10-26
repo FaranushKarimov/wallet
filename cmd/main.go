@@ -1,11 +1,11 @@
 package main
 
 import (
-	"sync"
 	"log"
+	"sync"
 
-	"github.com/najibulloShapoatov/wallet/pkg/types"
-	"github.com/najibulloShapoatov/wallet/pkg/wallet"
+	"github.com/FaranushKarimov/wallet/pkg/types"
+	"github.com/FaranushKarimov/wallet/pkg/wallet"
 )
 
 func main() {
@@ -25,7 +25,6 @@ func main() {
 
 	wg := sync.WaitGroup{}
 	wg.Add(2)
-
 
 	for i := 0; i < 1000; i++ {
 		svc.Pay(account.ID, types.Money(i), "Cafe")
